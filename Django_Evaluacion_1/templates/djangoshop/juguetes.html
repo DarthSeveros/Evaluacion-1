@@ -1,0 +1,51 @@
+{% extends 'djangoshop/layout.html' %}
+{% load static %}
+
+{% block title%}
+    Juguetes
+{% endblock %}
+
+{% block body%}
+    <div class="container text-center">
+        <div><h1 class="display-4 fw-bold p-5">Juguetes</h1></div>
+        <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'images/moto.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'images/moto.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'images/moto.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                </div>
+              </div>
+        </div>
+        </div>
+        <a href="/" class="btn btn-primary m-4">Volver</a>
+    </div>
+{% endblock %}

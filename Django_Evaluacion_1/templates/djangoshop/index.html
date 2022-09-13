@@ -1,0 +1,15 @@
+{% extends 'djangoshop/layout.html' %}
+
+{% block title%}
+    Django Shop
+{% endblock %}
+
+{% block body %}
+    <div class="alert alert-info display-1 text-center"> DJANGO SHOP</div>
+
+    <div class="row">
+        <div class="col"><a href="/usuario" class="btn p-3 btn-info w-100">Usuario</a></div>
+        <div class="col"><a href="/juguetes" class="btn p-3 btn-danger w-100">Juguete</a></div>
+        <div class="col"><a href="/ropa" class="btn p-3 btn-success w-100">Ropa</a></div>
+    </div>
+{% endblock %}

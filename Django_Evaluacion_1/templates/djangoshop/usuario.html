@@ -1,0 +1,24 @@
+{% extends 'djangoshop/layout.html' %}
+{% load static %}
+
+{% block title%}
+    Usuario
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1 class="m-5">Informacion Usuario</h1>
+        <div class="card border-0" style="width: 18rem;">
+            <img src="{%static 'images/moto.jpg' %}" class="card-img-top rounded-circle" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{nombre}}</h5>
+                <div class="col">
+                    <div class="row mb-2">{{id}}</div>
+                    <div class="row">{{email}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a href="/" class="btn btn-primary">Volver</a>
+{% endblock %}
