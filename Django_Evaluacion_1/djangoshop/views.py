@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -11,7 +12,7 @@ def usuario(request):
         'nombre': 'Jose',
         'email': 'jose@gmail.com'
     }
-    return render(request, 'djangoshop/usuario.html', data)
+    return HttpResponse(f'<p>Id : {data["id"]}</p> <p>Nombre : {data["nombre"]}</p> <p>Correo electrónico : {data["email"]}</p>')
 
 def juguetes(request):
     return render(request, 'djangoshop/juguetes.html')
