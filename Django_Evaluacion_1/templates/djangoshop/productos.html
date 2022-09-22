@@ -1,0 +1,65 @@
+{% extends 'djangoshop/layout.html' %}
+{% load static %}
+
+{% block title%}
+    {% if producto == 'juguetes' %}
+    Juguetes
+    {% endif %}
+{% endblock %}
+
+{% block body%}
+    <div class="container text-center">
+        <div><h1 class="display-4 fw-bold p-5">Juguetes</h1></div>
+        <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+              {% if producto == 'juguetes' %}
+              <img src="{% static 'images/Mandalorian.jpg' %}" class="card-img-top" alt="...">
+              {% else %}
+              <img src="{% static 'images/parka.jpg' %}" class="card-img-top" alt="...">
+              {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">{{ product1_name }}</h5>
+                  <p class="card-text">{{ product1_description }}</p>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="card-link">{{ product1_price }}</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+              {% if producto == 'juguetes' %}
+              <img src="{% static 'images/Krillin.jpg' %}" class="card-img-top" alt="...">
+              {% else %}
+              <img src="{% static 'images/polera.jpg' %}" class="card-img-top" alt="...">
+              {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">{{ product2_name }}</h5>
+                  <p class="card-text">{{ product2_description }}</p>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="card-link">{{ product2_price }}</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                {% if producto == 'juguetes' %}
+                <img src="{% static 'images/drstrange.jpg' %}" class="card-img-top" alt="...">
+                {% else %}
+                <img src="{% static 'images/chaqueta.jpg' %}" class="card-img-top" alt="...">
+                {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">{{ product3_name }}</h5>
+                  <p class="card-text">{{ product3_description }}</p>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="card-link">{{ product3_price }}</a>
+                </div>
+              </div>
+        </div>
+        </div>
+        <a href="/" class="btn btn-primary m-4">Volver</a>
+    </div>
+{% endblock %}
